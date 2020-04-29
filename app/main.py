@@ -14,7 +14,7 @@ def get_settings():
     return conf.DevConfig()
 
 
-@app.post("/zbx/", response_model=HostOut, status_code=201)
+@app.post("/alert/", response_model=HostOut, status_code=201)
 async def host_value(host: HostIn):
     result = HostOut(**host.dict(), received='Faild')
     return result

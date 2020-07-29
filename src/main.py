@@ -2,7 +2,7 @@ import uvicorn
 from typing import List
 from functools import lru_cache
 from fastapi import FastAPI
-from models import JsonIn, JsonOut, JsonAppdynamicsIn, JsonAppdynamicsOut
+from models import JsonIn, JsonOut
 from zbxsender import Sender
 import conf
 

@@ -1,3 +1,4 @@
+import os
 import uvicorn
 from typing import List
 from functools import lru_cache
@@ -23,4 +24,4 @@ async def alert_value(host: JsonIn):
 
 if __name__ == "__main__":
     conf = get_settings()
-    uvicorn.run(app, host="0.0.0.0", port=conf.APP_PORT)
+    uvicorn.run(app, host="0.0.0.0", port=os.environ['PORT'])
